@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--The line below is only used with flask run, cannot be used with python application.py-->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.1.1/socket.io.js"></script>
+		<!--The line below is only used with flask run, cannot be used with python application.py-->
+	<!--
+		<script src="{{ url_for('static', filename='socketio.js')}}"></script>
+	-->
+		<script src="{{ url_for('static', filename='index.js')}}"></script>
+		<title>Vote for unknown</title>
+	</head>
+	<body>
+		<div>Yes votes: <span id="yes">{{ votes["yes"] }}</span></div>
+		<div>No votes: <span id="no">{{ votes["no"] }}</span></div>
+		<div>Maybe votes: <span id="maybe">{{ votes["maybe"] }}</span></div>
+		<hr>
+		<button data-vote="yes">Yes</button>
+		<button data-vote="no">No</button>
+		<button data-vote="maybe">Maybe</button>
+	</body>
+</html>
